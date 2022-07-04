@@ -1,4 +1,4 @@
-import { objectType, extendType, stringArg, nonNull } from 'nexus'
+import { objectType, extendType, stringArg, nonNull, intArg } from 'nexus'
 import { User } from './User'
 
 export const Task = objectType({
@@ -44,7 +44,7 @@ export const TasksQuery = extendType({
       resolve(_parent, args, ctx) {
         return ctx.prisma.task.findMany({
           where: {
-              userId: args.userId
+            userId: args.userId
           }
         })
       },
@@ -57,28 +57,28 @@ export const TaskMutation = extendType({
   definition(t) {
     // create a new task
     t.nonNull.field('createTask', {
-     type: 'Task',
-     args: {
-       title: nonNull(stringArg()),
-       description: nonNull(stringArg()),
-       userId: stringArg(),
-       id: stringArg(),
-       status: stringArg(),
-     },
-     resolve(_root, args, ctx) {
-       return ctx.prisma.task.create({
-         data: {
-           title: args.title,
-           description: args.description,
-           userId: args.userId,
-           id: args.id,
-           status: args.status,
-         }
-       })
-     },
-   });
-     // update a task by id
-     t.field('updateTask', {
+      type: 'Task',
+      args: {
+        title: nonNull(stringArg()),
+        description: nonNull(stringArg()),
+        userId: stringArg(),
+        id: stringArg(),
+        status: stringArg(),
+      },
+      resolve(_root, args, ctx) {
+        return ctx.prisma.task.create({
+          data: {
+            title: args.title,
+            description: args.description,
+            userId: args.userId,
+            id: args.id,
+            status: args.status,
+          }
+        })
+      },
+    });
+    // update a task by id
+    t.field('updateTask', {
       type: 'Task',
       args: {
         id: nonNull(stringArg()),
