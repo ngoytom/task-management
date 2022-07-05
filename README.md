@@ -1,3 +1,11 @@
+## Task Management App (Jira)
+
+Built using TypeScript, GraphQL and PostgreSQL
+
+## Preview
+
+<img src="https://github.com/ngoytom/task-management/blob/main/sample.png" width="900" height="500">
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
