@@ -1,10 +1,22 @@
 ## Task Management App (Jira)
 
-Built using TypeScript, GraphQL and PostgreSQL
-
+Full Stack Task Management App that allows you to create project boards, organize tasks, and track work flow progess. 
+ 
 ## Preview
 
 <img src="https://github.com/ngoytom/task-management/blob/main/sample.png" width="900" height="500">
+
+## Built Using
+- React
+- TypeScript
+- GraphQL (Apollo)
+- Next.js
+- PostgreSQL
+- Prisma
+- Nexus
+- SendGrid (User authentication and mail server)
+- react-beautiful-dnd (Drag and drop tasks)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
